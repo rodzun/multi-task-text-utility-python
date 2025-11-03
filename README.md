@@ -33,5 +33,7 @@ pytest -q
 - `src/run_query.py` — CLI and core logic.
 - `prompts/main_prompt.txt` — prompt template.
 - `tests/test_core.py` — unit + integration tests (integration patched to avoid external calls by default).
+- `metrics/all_responses.json` — cumulative log of all responses for traceability.
+- `metrics/metrics.json` — summary of token usage, latency, and cost for each run.
 - `reports/PI_report_en.md` — project overview.
-- `.env.example` and `requirements.txt`.
+- `.env.example` and `requirements.txt`. 
