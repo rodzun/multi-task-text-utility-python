@@ -1,0 +1,72 @@
+[
+  {
+    "question": "How do I reset my password?",
+    "model": "gpt-3.5-turbo",
+    "tokens_prompt": 306,
+    "tokens_completion": 71,
+    "total_tokens": 377,
+    "latency_ms": 2121,
+    "estimated_cost_usd": 0.000754,
+    "timestamp": 1762154203
+  },
+  {
+    "question": "How do I sign up?",
+    "model": "gpt-3.5-turbo",
+    "tokens_prompt": 305,
+    "tokens_completion": 76,
+    "total_tokens": 381,
+    "latency_ms": 3817,
+    "estimated_cost_usd": 0.000762,
+    "timestamp": 1762154312
+  },
+  {
+    "question": "How do I reset?",
+    "model": "gpt-3.5-turbo",
+    "tokens_prompt": 10,
+    "tokens_completion": 20,
+    "total_tokens": 30,
+    "latency_ms": 0,
+    "estimated_cost_usd": 6e-05,
+    "timestamp": 1762155239
+  },
+  {
+    "question": "How do I reset?",
+    "model": "gpt-3.5-turbo",
+    "tokens_prompt": 10,
+    "tokens_completion": 20,
+    "total_tokens": 30,
+    "latency_ms": 0,
+    "estimated_cost_usd": 6e-05,
+    "timestamp": 1762155346
+  },
+  {
+    "question": "How do I reset?",
+    "model": "gpt-3.5-turbo",
+    "tokens_prompt": 10,
+    "tokens_completion": 20,
+    "total_tokens": 30,
+    "latency_ms": 0,
+    "estimated_cost_usd": 6e-05,
+    "timestamp": 1762155351
+  },
+  {
+    "question": "How do I reset?",
+    "model": "gpt-3.5-turbo",
+    "tokens_prompt": 10,
+    "tokens_completion": 20,
+    "total_tokens": 30,
+    "latency_ms": 0,
+    "estimated_cost_usd": 6e-05,
+    "timestamp": 1762155382
+  },
+  {
+    "question": "How do I reset?",
+    "model": "gpt-3.5-turbo",
+    "tokens_prompt": 10,
+    "tokens_completion": 20,
+    "total_tokens": 30,
+    "latency_ms": 0,
+    "estimated_cost_usd": 6e-05,
+    "timestamp": 1762155761
+  }
+]
