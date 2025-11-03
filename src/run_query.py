@@ -27,8 +27,10 @@ MODEL_COST_PER_1K = {
 
 PROMPT_TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "..", "prompts", "main_prompt.txt")
 PROMPT_TEMPLATE_PATH = os.path.normpath(PROMPT_TEMPLATE_PATH)
-METRICS_PATH = os.path.join(os.path.dirname(__file__), "..", "metrics", "metrics.json")
-METRICS_PATH = os.path.normpath(METRICS_PATH)
+METRICS_DIR = os.path.join(os.path.dirname(__file__), "..", "metrics")
+METRICS_PATH = os.path.join(METRICS_DIR, "metrics.json")
+ALL_RESPONSES_PATH = os.path.join(METRICS_DIR, "all_responses.json")
+
 
 
 def load_prompt_template() -> str:
@@ -137,6 +139,28 @@ def append_metrics(metrics: Dict[str, Any]):
         print("Warning: failed to write metrics:", e)
 
 
+def save_all_responses(response: Dict[str, Any]):
+    """Append the full JSON response to metrics/all_responses.json for reproducibility."""
+    try:
+        os.makedirs(os.path.dirname(ALL_RESPONSES_PATH), exist_ok=True)
+        data = []
+        if os.path.exists(ALL_RESPONSES_PATH):
+            try:
+                with open(ALL_RESPONSES_PATH, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+            except Exception:
+                data = []
+
+        response["timestamp"] = time.strftime('%Y-%m-%d %H:%M:%S')
+        data.append(response)
+
+        with open(ALL_RESPONSES_PATH, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+
+    except Exception as e:
+        print("Warning: failed to save response:", e)
+
+
 def ask(question: str, model: str = "gpt-3.5-turbo") -> Dict[str, Any]:
     if not OPENAI_API_KEY:
         raise RuntimeError("OPENAI_API_KEY not set. Copy .env.example to .env and set the key.")
@@ -152,6 +176,7 @@ def ask(question: str, model: str = "gpt-3.5-turbo") -> Dict[str, Any]:
         "estimated_cost_usd": resp["_meta"]["estimated_cost_usd"],
     }
     append_metrics(metrics)
+    save_all_responses(resp)
     return resp
 
 

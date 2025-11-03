@@ -33,5 +33,5 @@ pytest -q
 - `src/run_query.py` — CLI and core logic.
 - `prompts/main_prompt.txt` — prompt template.
 - `tests/test_core.py` — unit + integration tests (integration patched to avoid external calls by default).
-- `reports/PI_report_en.md` — 1–2 page report.
+- `reports/PI_report_en.md` — project overview.
 - `.env.example` and `requirements.txt`.

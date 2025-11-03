@@ -1,0 +1,42 @@
+[
+  {
+    "answer": "Send the user a password-reset link from the admin panel; ensure they confirm via email.",
+    "confidence": 0.95,
+    "actions": [
+      "Send reset link",
+      "Confirm user email",
+      "Advise password rules"
+    ],
+    "reasoning_summary": "Standard account flow; reset link suffices if email verified.",
+    "raw_model_output": "{\n  \"answer\": \"Send the user a password-reset link from the admin panel; ensure they confirm via email.\",\n  \"confidence\": 0.95,\n  \"actions\": [\"Send reset link\",\"Confirm user email\",\"Advise password rules\"],\n  \"reasoning_summary\": \"Standard account flow; reset link suffices if email verified.\"\n}",
+    "_meta": {
+      "model": "gpt-3.5-turbo",
+      "tokens_prompt": 306,
+      "tokens_completion": 71,
+      "total_tokens": 377,
+      "latency_ms": 4106,
+      "estimated_cost_usd": 0.000754
+    },
+    "timestamp": "2025-11-03 03:19:26"
+  },
+  {
+    "answer": "Direct the user to the 'Sign Up' button on the homepage; guide them through the registration form.",
+    "confidence": 0.9,
+    "actions": [
+      "Click 'Sign Up' button",
+      "Complete registration form",
+      "Verify email for activation"
+    ],
+    "reasoning_summary": "Common sign-up process; straightforward form completion and email verification.",
+    "raw_model_output": "{\n  \"answer\": \"Direct the user to the 'Sign Up' button on the homepage; guide them through the registration form.\",\n  \"confidence\": 0.90,\n  \"actions\": [\"Click 'Sign Up' button\",\"Complete registration form\",\"Verify email for activation\"],\n  \"reasoning_summary\": \"Common sign-up process; straightforward form completion and email verification.\"\n}",
+    "_meta": {
+      "model": "gpt-3.5-turbo",
+      "tokens_prompt": 305,
+      "tokens_completion": 77,
+      "total_tokens": 382,
+      "latency_ms": 1975,
+      "estimated_cost_usd": 0.000764
+    },
+    "timestamp": "2025-11-03 03:19:31"
+  }
+]
